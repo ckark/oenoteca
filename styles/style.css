@@ -1,6 +1,7 @@
 html {
 	box-sizing: border-box;
 	overflow-y: scroll;
+	overflow-x: hidden;
 	-webkit-text-size-adjust: 100%;
 	height: auto
 }
@@ -9,15 +10,210 @@ html {
 	background: transparent;
 }
 body {
-	overflow-x: hidden;
 	min-height: 100vh;
 }
-.container {
-  font-size: 1.5em;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 3fr 1fr;
-  align-items: center;
-  padding: 0 1em;
-  margin: auto;
+h1 {
+	font-weight: 800;
+	font-size: 5.063em;
+	letter-spacing: 0.125em
+}
+h2 {
+	font-weight: 800;
+	font-size: 3.375em;
+	letter-spacing: 0.11em;
+}
+h3 {
+	font-weight: 800;
+	font-size: 2.25em;
+	letter-spacing: .1em;
+}
+h4 {
+	font-weight: 500;
+	font-size: 1.5em;
+	letter-spacing: 0.042em;
+		line-height: 1.5;
+}
+h5 {
+	font-size: 1em;
+		letter-spacing: 0.042em;
+}
+p {
+	font-size: 1m;
+	letter-spacing: 0.042em;
+	line-height: 1.75;
+}
+h1, h2, h3, h4, h5, p {
+	color: rgb(34, 34, 34);
+	margin: .5em 0;
+}
+h1, h2, h3, h4 {
+	font-family: "Brandon-Grotesque", sans-serif;
+	text-align: center;
+}
+h5, p {
+	font-family: "Raleway", sans-serif;
+}
+h5 {
+	font-weight: 800;
+	text-transform: uppercase;
+}
+p {
+	font-weight: 500;
+}
+a {
+	text-decoration: none;
+}
+h1.white, h2.white, h3.white, h4.white, h5.white, p.white {
+	color: rgb(255, 255, 255);
+}
+h3.button {
+	font-family: "Raleway", sans-serif;
+	color: white;
+	padding: 1em;
+	background-color: rgb(39, 52, 65);
+}
+.container-nav {
+	background-color: rgb(163, 203, 219);
+	display: grid;
+	grid-row-gap: 1em;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	justify-items: center;
+	padding: 3em 0;
+}
+.logotype {
+	grid-column: span 5;
+}
+.logotype > img {
+	width: 50em;
+}
+h4.nav-text {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+}
+.heading {
+	grid-column: span 5;
+}
+.logo {
+	grid-column: span 5;
+	padding-bottom: 2em;
+}
+.logo img {
+	width: 12em;
+}
+.button {
+	grid-column: span 5;
+	margin: 0;
+}
+.button-style {
+	width: 25em;
+}
+.button h3:hover {
+	color: rgb(163, 203, 219);
+}
+.container-product1 {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	background-color: rgb(39, 71, 101);
+	padding: 3em 0;
+}
+.container-product2 {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	background-color: rgb(163, 203, 219);
+	padding: 3em 0;
+}
+.cask, .gauge {
+	padding: 2em 0;
+ 	text-align: center;
+}
+.cask > img {
+	width: 12em;
+}
+.container-product3 {
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	background-color: rgb(39, 71, 101);
+	padding: 3em 0;
+}
+.gauge > img {
+	width: 8em;
+}
+.container-product1 > h4, p, .container-product2 > h4, p, .container-product3 > h4, p {
+	padding: 0 25%;
+}
+.main-head {
+  grid-area: header-text;
+}
+.content {
+  grid-area: content;
+}
+.path {
+  grid-area: sidebar;
+}
+.container-process {
+	display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+	grid-row-gap: 3em;
+	background-color: rgb(39, 52, 65);
+	padding: 3em 0;
+}
+.description h4 {
+	text-align: left;
+}
+.description > p {
+	padding: 0em;
+}
+.step-box > img {
+	width: 20em;
+}
+.description > h4 {
+		text-align: left;
+}
+.description > p {
+		padding: 0;
+}
+.container-process > h2 {
+	grid-column: col-start / span 12;
+}
+.step-box {
+	grid-column: col-start 4 / span 1;
+}
+.description {
+	grid-column: col-start 6 / span 5;
+}
+.container-impact1 {
+	padding: 3em 0;
+	background-color: rgb(163, 203, 219);
+}
+.container-impact2 {
+	display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+	grid-row-gap: 2em;
+	background-color: rgb(39, 52, 65);
+	padding: 3em 0;
+	justify-items: center;
+}
+.impact-header-left {
+	grid-column: span 6;
+	text-align: center;
+}
+.impact-header-right {
+	grid-column: span 6;
+	text-align: center;
+}
+.impact-img-left > img, .impact-img-right > img {
+	width: 10em;
+}
+.impact-img-left, .impact-img-right {
+	grid-column: span 6;
+}
+.impact-description-left, .impact-description-right {
+	grid-column: span 6;
+}
+.impact-description-left p, .impact-description-right > p {
+	padding: 0 4em;
 }
