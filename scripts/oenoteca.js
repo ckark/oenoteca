@@ -1,7 +1,7 @@
 $(document).ready(function($) {
         window.onresize = function() {
                 location.reload();
-        };
+        }
         window.onload = function() {
                 let navLinks = document.querySelector('.narrow');
                 let narrowlinks = document.querySelector('.narrowlinks');
@@ -11,8 +11,6 @@ $(document).ready(function($) {
                         narrowlinks.classList.toggle('hidden');
                 }
         };
-});
-$(document).ready(function($) {
         var controller = new ScrollMagic.Controller({
                 globalSceneOptions: {
                         triggerHook: 'onLeave',
@@ -23,9 +21,6 @@ $(document).ready(function($) {
         var slides = document.querySelectorAll(".panel");
         // create scene for every short slide
         for (var i = 0; i < slides.length; i++) {
-                if (window.innerWidth < 1100) {
-                        scene.enabled(false);
-                }
                 var scene = new ScrollMagic.Scene({
                         triggerElement: slides[i],
                         duration: "1"
@@ -34,14 +29,15 @@ $(document).ready(function($) {
         // get long slides
         var longslides = document.querySelectorAll(".panel-long");
         // create scene for every long slide
-        for (var j = 0; j < longslides.length; j++) {
-                if (window.innerWidth < 1100) {
-                        scenelong.enabled(false);
-                }
+        for (var i = 0; i < longslides.length; i++) {
                 var scenelong = new ScrollMagic.Scene({
-                        triggerElement: longslides[j],
+                        triggerElement: longslides[i],
                         duration: "150"
-                }).setPin(longslides[j]).addTo(controller);
+                }).setPin(longslides[i]).addTo(controller);
+        }
+        if (window.innerWidth < 1100) {
+                scene.enabled(false);
+                scenelong.enabled(false);
         }
 });
 $(document).on("click", "a[href^='#']", function(e) {
@@ -71,19 +67,18 @@ $(document).ready(function($) {
                                 return false;
                         }
                 }
-        });
+        })
 });
 $(document).ready(function($) {
-        $(window).scroll(function() {
-                var scrollTop = 142;
-                if ($(window).scrollTop() >= scrollTop) {
-                        $('.container-nav').css({
-                                position: 'fixed',
-                                top: '0'
-                        });
-                }
-                if ($(window).scrollTop() < scrollTop) {
-                        $('.container-nav').removeAttr('style');
-                }
-        });
+  $(window).scroll(function() {
+        var scrollTop = 142;
+        if ($(window).scrollTop() >= scrollTop) {
+                $('.container-nav').css({
+                        position: 'fixed',
+                        top: '0'
+                });
+        }
+        if ($(window).scrollTop() < scrollTop) {
+                $('.container-nav').removeAttr('style');
+        }
 });
