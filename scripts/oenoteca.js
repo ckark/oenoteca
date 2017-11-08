@@ -12,38 +12,6 @@ $(document).ready(function($) {
                 }
         };
 });
-$(document).ready(function($) {
-        var controller = new ScrollMagic.Controller({
-                globalSceneOptions: {
-                        triggerHook: 'onLeave',
-                        offset: "-103"
-                }
-        });
-        // get short slides
-        var slides = document.querySelectorAll(".panel");
-        // create scene for every short slide
-        for (var i = 0; i < slides.length; i++) {
-                if (window.innerWidth < 1100) {
-                        scene.enabled(false);
-                }
-                var scene = new ScrollMagic.Scene({
-                        triggerElement: slides[i],
-                        duration: "1"
-                }).setPin(slides[i]).addTo(controller);
-        }
-        // get long slides
-        var longslides = document.querySelectorAll(".panel-long");
-        // create scene for every long slide
-        for (var j = 0; j < longslides.length; j++) {
-                if (window.innerWidth < 1100) {
-                        scenelong.enabled(false);
-                }
-                var scenelong = new ScrollMagic.Scene({
-                        triggerElement: longslides[j],
-                        duration: "150"
-                }).setPin(longslides[j]).addTo(controller);
-        }
-});
 $(document).on("click", "a[href^='#']", function(e) {
         var id = $(this).attr("href");
         if ($(id).length > 0) {
