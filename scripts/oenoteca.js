@@ -11,6 +11,34 @@ $(document).ready(function($) {
                         narrowlinks.classList.toggle('hidden');
                 }
         };
+        var controller = new ScrollMagic.Controller({
+                globalSceneOptions: {
+                        triggerHook: 'onLeave',
+                        offset: "-103"
+                }
+        });
+        // get short slides
+        var slides = document.querySelectorAll(".panel");
+        // create scene for every short slide
+        for (var i = 0; i < slides.length; i++) {
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: slides[i],
+                        duration: "1"
+                }).setPin(slides[i]).addTo(controller);
+        }
+        // get long slides
+        var longslides = document.querySelectorAll(".panel-long");
+        // create scene for every long slide
+        for (var i = 0; i < longslides.length; i++) {
+                var scenelong = new ScrollMagic.Scene({
+                        triggerElement: longslides[i],
+                        duration: "150"
+                }).setPin(longslides[i]).addTo(controller);
+        }
+        if (window.innerWidth < 1100) {
+                scene.enabled(false);
+                scenelong.enabled(false);
+        }
 });
 $(document).on("click", "a[href^='#']", function(e) {
         var id = $(this).attr("href");
