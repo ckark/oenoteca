@@ -63,14 +63,6 @@ var controller = new ScrollMagic.Controller({
                 offset: "-103"
         }
 });
-if (err) {
-        const proxiedError = new Error();
-        proxiedError.message = err.message;
-        proxiedError.stack = err.stack;
-        reject(proxiedError);
-} else {
-        resolve(res);
-}
 // get short slides
 var slides = document.querySelectorAll(".panel");
 // create scene for every short slide
