@@ -17,6 +17,14 @@ $(document).ready(function($) {
                         offset: "-103"
                 }
         });
+        if (err) {
+                const proxiedError = new Error();
+                proxiedError.message = err.message;
+                proxiedError.stack = err.stack;
+                reject(proxiedError);
+        } else {
+                resolve(res);
+        }
         // get short slides
         var slides = document.querySelectorAll(".panel");
         // create scene for every short slide
@@ -70,16 +78,16 @@ $(document).ready(function($) {
         })
 });
 $(document).ready(function($) {
-  $(window).scroll(function() {
-        var scrollTop = 142;
-        if ($(window).scrollTop() >= scrollTop) {
-                $('.container-nav').css({
-                        position: 'fixed',
-                        top: '0'
-                });
-        }
-        if ($(window).scrollTop() < scrollTop) {
-                $('.container-nav').removeAttr('style');
-        }
-});
+        $(window).scroll(function() {
+                var scrollTop = 142;
+                if ($(window).scrollTop() >= scrollTop) {
+                        $('.container-nav').css({
+                                position: 'fixed',
+                                top: '0'
+                        });
+                }
+                if ($(window).scrollTop() < scrollTop) {
+                        $('.container-nav').removeAttr('style');
+                }
+        });
 });
