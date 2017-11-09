@@ -32,6 +32,6 @@ $(function() {
                 setHeights: false,
                 scrollbars: false,
                 updateHash: false,
-                interstitialSection : ".panel"
+                interstitialSection : ".container-footer"
         })
 });
