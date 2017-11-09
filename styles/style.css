@@ -138,7 +138,7 @@ h4.button {
 	grid-template-rows: auto;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	justify-items: center;
-	padding: 3em 0;
+	 0;
 }
 .logotype {
 	display: grid;
@@ -179,13 +179,13 @@ h4.nav-text {
 	display: grid;
 	justify-items: center;
 	background-color: rgb(39, 71, 101);
-	padding: 6em 22.5%;
+	padding: 3em 22.5%;
 }
 .container-product2 {
   display: grid;
 	justify-items: center;
 	background-color: rgb(199, 225, 255);
-	padding: 6em 22.5%;
+	padding: 3em 22.5%;
 }
 .cask, .gauge {
 	padding: 2em 0;
@@ -198,7 +198,7 @@ h4.nav-text {
 	display: grid;
 	justify-content: center;
 	background-color: rgb(39, 71, 101);
-	padding: 6em 22.5%;
+	padding: 3em 22.5%;
 }
 .gauge>img {
 	width: 12em;
@@ -221,7 +221,7 @@ h4.nav-text {
 	grid-template-columns: repeat(12, [col-start] 1fr);
 	grid-row-gap: 3em;
 	background-color: rgb(39, 52, 65);
-	padding: 6em 0;
+	padding: 3em 0;
 	align-items: center;
 }
 .container-process h3 {
@@ -262,7 +262,7 @@ h4.nav-text {
 	display: grid;
 	background-color: rgb(199, 225, 255);
 	justify-items: center;
-	padding: 6em 22.5%;
+	padding: 3em 22.5%;
 }
 .container-impact1>img {
   height: 25em;
@@ -274,7 +274,7 @@ h4.nav-text {
 	grid-template-columns: repeat(12, [col-start] 1fr);
 	grid-row-gap: 2em;
 	background-color: rgb(39, 71, 101);
-	padding: 6em 0;
+	padding: 3em 0;
 	justify-items: center;
 }
 .impact-header-left {
@@ -344,7 +344,7 @@ h4.button-light {
 	grid-auto-rows: minmax(2em, auto);
 	background-color: rgb(199, 225, 255);
 	text-align: center;
-	padding: 6em 0;
+	padding: 3em 0;
 }
 .form-group {
 	padding: 3em 0;
@@ -389,7 +389,7 @@ button#send {
 	display: grid;
 	grid-template-columns: 2fr 8fr 2fr;
 	background-color: rgb(39, 52, 65);
-	padding: 3em 2em;
+	 2em;
 	align-items: center;
 	width: 100vw;
 }
@@ -443,7 +443,7 @@ button#send {
 		width: 30em;
 	}
 	.container-product1, .container-product2, .container-product3, .container-process, .container-impact1, .container-contact {
-		padding: 3em;
+		;
 	}
 	.container-process {
 		grid-template-columns: 1fr;
@@ -521,7 +521,7 @@ button#send {
 	.container-footer {
 		grid-template-columns: 1fr;
 		grid-auto-rows: 2;
-		padding: 3em 2em;
+		 2em;
 		align-items: center;
 		text-align: center;
 	}
