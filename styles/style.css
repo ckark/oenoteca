@@ -389,7 +389,7 @@ button#send {
 	display: grid;
 	grid-template-columns: 2fr 8fr 2fr;
 	background-color: rgb(39, 52, 65);
-	 2em;
+	padding: 3em 2em;
 	align-items: center;
 	width: 100vw;
 }
