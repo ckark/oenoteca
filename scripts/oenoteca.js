@@ -29,6 +29,7 @@ $(function() {
                 section: ".panel",
                 sectionName: false,
                 scrollSpeed: 1200,
+                offset: -50,
                 setHeights: false,
                 scrollbars: false,
                 updateHash: false,
