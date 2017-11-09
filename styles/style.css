@@ -176,11 +176,13 @@ h4.nav-text {
 	color: rgb(163, 203, 219);
 }
 .container-product1 {
+	display: grid;
 	justify-items: center;
 	background-color: rgb(39, 71, 101);
 	padding: 6em 22.5%;
 }
 .container-product2 {
+  display: grid;
 	justify-items: center;
 	background-color: rgb(199, 225, 255);
 	padding: 6em 22.5%;
@@ -193,6 +195,7 @@ h4.nav-text {
 	width: 20em;
 }
 .container-product3 {
+	display: grid;
 	justify-content: center;
 	background-color: rgb(39, 71, 101);
 	padding: 6em 22.5%;
