@@ -1,7 +1,4 @@
 $(document).ready(function($) {
-        window.onresize = function() {
-                location.reload();
-        };
         window.onload = function() {
                 let navLinks = document.querySelector('.narrow');
                 let narrowlinks = document.querySelector('.narrowlinks');
@@ -11,36 +8,6 @@ $(document).ready(function($) {
                         narrowlinks.classList.toggle('hidden');
                 }
         };
-        var controller = new ScrollMagic.Controller({
-                globalSceneOptions: {
-                        triggerHook: 'onLeave',
-                        offset: "-103"
-                }
-        });
-        // get short slides
-        var slides = document.querySelectorAll(".panel");
-        // create scene for every short slide
-        for (var i = 0; i < slides.length; i++) {
-                if (window.innerWidth < 1100) {
-                        scene.enabled(false);
-                }
-                var scene = new ScrollMagic.Scene({
-                        triggerElement: slides[i],
-                        duration: "1"
-                }).setPin(slides[i]).addTo(controller);
-        }
-        // get long slides
-        var longslides = document.querySelectorAll(".panel-long");
-        // create scene for every long slide
-        for (var j = 0; j < longslides.length; j++) {
-                if (window.innerWidth < 1100) {
-                        scenelong.enabled(false);
-                }
-                var scenelong = new ScrollMagic.Scene({
-                        triggerElement: longslides[j],
-                        duration: "150"
-                }).setPin(longslides[j]).addTo(controller);
-        }
 });
 $(document).on("click", "a[href^='#']", function(e) {
         var id = $(this).attr("href");
@@ -54,7 +21,7 @@ $(document).on("click", "a[href^='#']", function(e) {
                 }
         }
 });
-$(document).ready(function($) {
+$(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//,
                                 '') || location.hostname == this.hostname) {
@@ -71,17 +38,14 @@ $(document).ready(function($) {
                 }
         });
 });
-$(document).ready(function($) {
-        $(window).scroll(function() {
-                var scrollTop = 142;
-                if ($(window).scrollTop() >= scrollTop) {
-                        $('.container-nav').css({
-                                position: 'fixed',
-                                top: '0'
-                        });
-                }
-                if ($(window).scrollTop() < scrollTop) {
-                        $('.container-nav').removeAttr('style');
-                }
-        });
+$(function() {
+        $.scrollify({
+                section: ".panel",
+                sectionName: false,
+                scrollSpeed: 1200,
+                setHeights: false,
+                scrollbars: false,
+                updateHash: false,
+                interstitialSection: ".container-footer"
+        })
 });
