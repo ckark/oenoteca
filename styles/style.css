@@ -138,7 +138,7 @@ h4.button {
 	grid-template-rows: auto;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	justify-items: center;
-	 0;
+	padding: 3em 0;
 }
 .logotype {
 	display: grid;
