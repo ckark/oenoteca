@@ -29,9 +29,10 @@ $(function() {
                 section: ".panel",
                 sectionName: false,
                 scrollSpeed: 1200,
+                offset: 0,
                 setHeights: false,
                 scrollbars: false,
                 updateHash: false,
-                interstitialSection: ".interstitial"
+                interstitialSection : ".container-footer"
         })
 });
