@@ -138,7 +138,10 @@ h4.button {
 	grid-template-rows: auto;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	justify-items: center;
-	padding: 3em 0 6em 0;
+	padding: 3em 0 3em 0;
+}
+.navbar-fixed {
+  position: fixed;
 }
 .logotype {
 	display: grid;
@@ -154,13 +157,19 @@ h4.nav-text {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 800;
 }
+.container-headline {
+	display: grid;
+	background-color: rgb(199, 225, 255);
+	justify-items: center;
+	padding-bottom: 3em;
+}
 .heading {
 	grid-column: span 5;
-	padding-top: 2em;
+	padding: 2em 0;
 }
 .logo {
 	grid-column: span 5;
-	padding-bottom: .5em;
+	padding: 1em 0;
 }
 .logo img {
 	width: 20em;
@@ -168,6 +177,7 @@ h4.nav-text {
 .button {
 	grid-column: span 5;
 	margin: 0;
+	padding: 2em 0;
 }
 .button-style {
 	width: 45em;
@@ -279,11 +289,9 @@ h4.nav-text {
 }
 .impact-header-left {
 	grid-column: span 6;
-	text-align: center;
 }
 .impact-header-right {
 	grid-column: span 6;
-	text-align: center;
 }
 .impact-img-left>img, .impact-img-right>img {
 	width: 15em;
@@ -409,6 +417,9 @@ button#send {
 /* MEDIA QUERIES */
 
 @media (max-width: 767px) {
+	.pagination {
+		display: none;
+	}
 	.narrow {
 		display: flex;
 	}
