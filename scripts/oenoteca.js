@@ -1,30 +1,16 @@
-$(document).ready(function($) {
-        window.onload = function() {
-                let navLinks = document.querySelector('.narrow');
-                let narrowlinks = document.querySelector('.narrowlinks');
-                navLinks.addEventListener('click', toggle);
+$(function() {
+        var navLinks = document.querySelector('.narrow');
+        navLinks.addEventListener('click', toggle);
+        var narrowlinks = document.querySelector('.narrowlinks');
 
-                function toggle() {
-                        narrowlinks.classList.toggle('hidden');
-                }
+        function toggle() {
+                narrowlinks.classList.toggle('hidden');
         };
-});
-$(document).on("click", "a[href^='#']", function(e) {
-        var id = $(this).attr("href");
-        if ($(id).length > 0) {
-                e.preventDefault();
-                // trigger scroll
-                controller.scrollTo(id);
-                // if supported by the browser we can even update the URL.
-                if (window.history && window.history.pushState) {
-                        history.pushState("", document.title, id);
-                }
-        }
 });
 $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//,
-                                '') || location.hostname == this.hostname) {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(
+                                /^\//, '') || location.hostname == this.hostname) {
                         var target = $(this.hash);
                         target = target.length ? target : $('[name=' + this.hash.slice(
                                 1) + ']');
