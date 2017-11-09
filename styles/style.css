@@ -273,8 +273,9 @@ h4.nav-text {
 	justify-items: center;
 	padding: 6em 22.5%;
 }
-.container-impact1>img {
+.leaf {
   height: 25em;
+	width: auto;
 	padding-top: 3em;
 }
 .container-impact2 {
