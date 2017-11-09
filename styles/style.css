@@ -139,7 +139,6 @@ h4.button {
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	justify-items: center;
 	padding: 3em 0;
-	z-index: 1;
 }
 .logotype {
 	display: grid;
@@ -154,17 +153,6 @@ h4.button {
 h4.nav-text {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 800;
-}
-.container-headline {
-	background-color: rgb(199, 225, 255);
-	width: 100vw;
-	display: grid;
-	grid-row-gap: 3em;
-	grid-template-rows: auto;
-	grid-template-columns: 1fr;
-	justify-items: center;
-	margin: 0;
-	padding-bottom: 6em;
 }
 .heading {
 	grid-column: span 5;
