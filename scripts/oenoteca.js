@@ -24,14 +24,3 @@ $(function() {
                 }
         });
 });
-$(function() {
-        $.scrollify({
-                section: ".panel",
-                sectionName: false,
-                scrollSpeed: 1200,
-                setHeights: false,
-                scrollbars: false,
-                updateHash: false,
-                interstitialSection : ".container-footer"
-        })
-});
