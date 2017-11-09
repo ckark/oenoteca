@@ -17,7 +17,7 @@ $(function() {
                         if (target.length) {
                                 $('html,body').animate({
                                         scrollTop: target.offset().top -
-                                                32
+                                                0
                                 }, 1000);
                                 return false;
                         }
