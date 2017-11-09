@@ -138,7 +138,7 @@ h4.button {
 	grid-template-rows: auto;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	justify-items: center;
-	padding: 6em 0;
+	padding: 3em 0 6em 0;
 }
 .logotype {
 	display: grid;
@@ -422,7 +422,7 @@ button#send {
 		font-size: 2.4rem;
 	}
 	h4 {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 	}
 	p {
 		font-size: 1rem;
@@ -443,7 +443,7 @@ button#send {
 		width: 30em;
 	}
 	.container-product1, .container-product2, .container-product3, .container-process, .container-impact1, .container-contact {
-		;
+		padding: 3em;
 	}
 	.container-process {
 		grid-template-columns: 1fr;
