@@ -46,6 +46,6 @@ $(function() {
                 setHeights: false,
                 scrollbars: false,
                 updateHash: false,
-                interstitialSection: ".container-footer"
+                interstitialSection: ".interstitial"
         })
 });
