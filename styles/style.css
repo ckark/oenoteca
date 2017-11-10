@@ -13,13 +13,14 @@ body {
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+/* Typography */
 
 h1, h2, h3, h4, h5, h6, p {
 	color: rgb(34, 34, 34);
 	margin: 0;
 }
 h1, h2, h3, h4 {
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Brandon-Grotesque", sans-serif;
 	text-align: center;
 }
 h5, h6, p {
@@ -73,7 +74,7 @@ p {
 a {
 	text-decoration: none;
 }
-h1.white, h2.white, h3.white, h4.white, h5.white, p.white {
+*.white {
 	color: rgb(255, 255, 255);
 }
 h4.button {
@@ -85,6 +86,8 @@ h4.button {
 	margin: .5em 0;
 	text-transform: uppercase;
 }
+/* Loading Animation */
+
 .hidden {
 	display: none;
 }
@@ -95,6 +98,7 @@ h4.button {
 	width: 100vw;
 	height: 100vh;
 	background: center no-repeat #fff;
+	z-index: 10;
 }
 .film-container {
 	display: flex;
@@ -104,6 +108,8 @@ h4.button {
 	align-items: center;
 	width: 30em;
 }
+/* Navbar on Small Viewports */
+
 .narrow {
 	display: flex;
 	justify-content: center;
@@ -130,6 +136,8 @@ h4.button {
 	text-decoration: none;
 	padding: 2em 0;
 }
+/* Navbar */
+
 .container-nav {
 	width: 100%;
 	background-color: rgb(199, 225, 255);
@@ -140,9 +148,11 @@ h4.button {
 	justify-items: center;
 	padding: 3em 0 3em 0;
 }
-.navbar-fixed {
-  position: fixed;
+.navbar-sticky {
+	position: sticky;
 }
+/* Hero Section */
+
 .logotype {
 	display: grid;
 	justify-content: center;
@@ -185,6 +195,8 @@ h4.nav-text {
 .button h3:hover {
 	color: rgb(163, 203, 219);
 }
+/* Product Sections */
+
 .container-product1 {
 	display: grid;
 	justify-items: center;
@@ -192,7 +204,7 @@ h4.nav-text {
 	padding: 6em 22.5%;
 }
 .container-product2 {
-  display: grid;
+	display: grid;
 	justify-items: center;
 	background-color: rgb(199, 225, 255);
 	padding: 6em 22.5%;
@@ -226,6 +238,8 @@ h4.nav-text {
 .path {
 	grid-area: sidebar;
 }
+/* Product Section */
+
 .container-process {
 	display: grid;
 	grid-template-columns: repeat(12, [col-start] 1fr);
@@ -268,6 +282,8 @@ h4.nav-text {
 .description {
 	grid-column: col-start 6 / span 5;
 }
+/* Impact Sections */
+
 .container-impact1 {
 	display: grid;
 	background-color: rgb(199, 225, 255);
@@ -275,7 +291,7 @@ h4.nav-text {
 	padding: 6em 22.5%;
 }
 .container-impact1>img {
-  height: 25em;
+	height: 25em;
 	width: auto;
 	padding-top: 3em;
 }
@@ -286,6 +302,10 @@ h4.nav-text {
 	background-color: rgb(39, 71, 101);
 	padding: 6em 0;
 	justify-items: center;
+}
+.impact-description-left>a {
+	text-decoration: none;
+	color: white;
 }
 .impact-header-left {
 	grid-column: span 6;
@@ -305,6 +325,8 @@ h4.nav-text {
 .impact-description-left>p, .impact-description-right>p {
 	padding: 0 4em;
 }
+/* Testimonials Section */
+
 .container-stories {
 	display: grid;
 	grid-template-columns: 3fr 2fr;
@@ -346,6 +368,8 @@ h4.button-light {
 	background-color: rgb(199, 225, 255);
 	padding: .75em 0;
 }
+/* Contact Section */
+
 .container-contact {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -393,6 +417,8 @@ button#send {
 	padding: 0;
 	background-color: transparent;
 }
+/* Footer */
+
 .container-footer {
 	display: grid;
 	grid-template-columns: 2fr 8fr 2fr;
@@ -417,9 +443,6 @@ button#send {
 /* MEDIA QUERIES */
 
 @media (max-width: 767px) {
-	.pagination {
-		display: none;
-	}
 	.narrow {
 		display: flex;
 	}
@@ -438,7 +461,7 @@ button#send {
 	p {
 		font-size: 1rem;
 	}
-	.primary {
+	.navbar-sticky, .primary {
 		display: none;
 	}
 	.container-nav {
@@ -532,7 +555,7 @@ button#send {
 	.container-footer {
 		grid-template-columns: 1fr;
 		grid-auto-rows: 2;
-		 2em;
+		2em;
 		align-items: center;
 		text-align: center;
 	}
@@ -598,7 +621,7 @@ button#send {
 	.container-process {
 		grid-template-columns: 1fr;
 		grid-auto-rows: auto;
-		height:auto;
+		height: auto;
 	}
 	.step-box-row {
 		display: block;
