@@ -1,3 +1,16 @@
+/*Preloading Animation*/
+$(window).on('load', function() {
+	  $('html, body').css({
+	    'overflow': 'hidden',
+	    'height': '100%'
+	  });
+	  $(".se-pre-con").delay(2000).fadeOut("slow");
+	});
+	$(window).on('load', function() {
+	  setTimeout(function() {
+	    $('html, body').removeAttr('style');
+	  }, 2000)
+	});
 /* Toggle Navbar Menu on Small Viewports */
 $(function() {
 	var navLinks = document.querySelector('.narrow');
