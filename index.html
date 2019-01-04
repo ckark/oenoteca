@@ -433,7 +433,7 @@
 
 			<footer class="container-footer">
 				<h5 class="white copyright">
-					© 2018 | OENOTECA
+					© <span id="copyright">2017</span> | OENOTECA
 				</h5>
 
 				<div class="social-icons">
@@ -442,5 +442,10 @@
 				</div>
 			</footer>
 		</header>
+	<script>
+            const year = document.getElementById("copyright");
+            const currentYear = new Date().getFullYear().toString();
+            year.innerHTML = currentYear;
+        </script>
 	</body>
 </html>
